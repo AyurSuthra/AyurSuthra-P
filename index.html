@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyurSutra - My Wellness Journey</title>
+    <link icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="app-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <h1>AyurSutra</h1>
+                <span class="subtitle">My Wellness Journey</span>
+            </div>
+            <div class="header-actions">
+                <button class="notification-btn" data-action="toggle-notifications">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">2</span>
+                </button>
+                <div class="user-profile">
+                    <span>Arjun Patel</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="sidebar">
+        <div class="nav-items">
+            <button class="nav-item active" data-view="dashboard">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </button>
+            <button class="nav-item" data-view="therapies">
+                <i class="fas fa-leaf"></i>
+                <span>My Therapies</span>
+            </button>
+            <button class="nav-item" data-view="appointments">
+                <i class="fas fa-calendar-check"></i>
+                <span>Appointments</span>
+            </button>
+            <button class="nav-item" data-view="profile">
+                <i class="fas fa-user-circle"></i>
+                <span>Health Profile</span>
+            </button>
+            <button class="nav-item" data-view="care-guide">
+                <i class="fas fa-book-open"></i>
+                <span>Care Guide</span>
+            </button>
+            <button class="nav-item" data-view="progress">
+                <i class="fas fa-chart-line"></i>
+                <span>Progress</span>
+            </button>
+            <button class="nav-item" data-view="messages">
+                <i class="fas fa-comments"></i>
+                <span>Messages</span>
+            </button>
+        </div>
+        
+        <div class="emergency-contact">
+            <button class="emergency-btn" data-action="emergency-contact">
+                <i class="fas fa-phone"></i>
+                <span>Emergency Contact</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Dashboard View -->
+        <div id="dashboard-view" class="view active">
+            <div class="welcome-section">
+                <h2>Welcome back, Arjun! 🌱</h2>
+                <p class="welcome-text">You're on day 12 of your Panchakarma journey. Keep up the great progress!</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="progress-card card">
+                    <div class="card-header">
+                        <h3>Current Therapy Progress</h3>
+                        <div class="therapy-badge">Panchakarma Detox</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="circular-progress">
+                            <div class="progress-circle" data-progress="65">
+                                <span class="progress-text">65%</span>
+                            </div>
+                        </div>
+                        <div class="progress-details">
+                            <div class="detail-item">
+                                <span class="label">Days Completed:</span>
+                                <span class="value">12 of 21</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Sessions Done:</span>
+                                <span class="value">8 of 14</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="next-appointment card">
+                    <div class="card-header">
+                        <h3>Next Appointment</h3>
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="card-body">
+                        <div class="appointment-info">
+                            <div class="date">September 16, 2025</div>
+                            <div class="time">11:00 AM</div>
+                            <div class="therapist">with Dr. Meera Sharma</div>
+                        </div>
+                        <div class="appointment-actions">
+                            <button class="btn btn--primary btn--sm" data-action="reschedule">
+                                <i class="fas fa-edit"></i>
+                                Reschedule
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wellness-score card">
+                    <div class="card-header">
+                        <h3>Today's Wellness</h3>
+                        <div class="score-indicator excellent">Excellent</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="wellness-metrics">
+                            <div class="metric">
+                                <span class="metric-label">Mood</span>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Energy</span>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Digestion</span>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reminders-card card">
+                    <div class="card-header">
+                        <h3>Today's Reminders</h3>
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="card-body">
+                        <div class="reminder-list">
+                            <div class="reminder-item">
+                                <i class="fas fa-pills"></i>
+                                <span>Take herbal medicine before breakfast</span>
+                            </div>
+                            <div class="reminder-item">
+                                <i class="fas fa-hand-sparkles"></i>
+                                <span>Oil massage at 6 PM today</span>
+                            </div>
+                            <div class="reminder-item">
+                                <i class="fas fa-snowflake"></i>
+                                <span>Avoid cold foods until treatment completes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- My Therapies View -->
+        <div id="therapies-view" class="view">
+            <div class="view-header">
+                <h2>My Therapies</h2>
+                <p class="view-subtitle">Track your Panchakarma treatment journey</p>
+            </div>
+
+            <div class="therapy-timeline">
+                <div class="timeline-item completed">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Initial Consultation</h4>
+                        <p>September 2, 2025</p>
+                        <span class="status status--success">Completed</span>
+                        <div class="therapy-details">Assessment and treatment planning</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item completed">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Abhyanga Massage</h4>
+                        <p>September 4, 2025</p>
+                        <span class="status status--success">Completed</span>
+                        <div class="therapy-details">Full body oil massage for detoxification</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item completed">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Swedana (Steam Therapy)</h4>
+                        <p>September 6, 2025</p>
+                        <span class="status status--success">Completed</span>
+                        <div class="therapy-details">Steam therapy to open channels</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item active">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Panchakarma Main Treatment</h4>
+                        <p>September 10, 2025 - Ongoing</p>
+                        <span class="status status--warning">In Progress</span>
+                        <div class="therapy-details">Core detoxification procedures</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item upcoming">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Follow-up Session</h4>
+                        <p>September 16, 2025</p>
+                        <span class="status status--info">Scheduled</span>
+                        <div class="therapy-details">Progress evaluation and guidance</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Appointments View -->
+        <div id="appointments-view" class="view">
+            <div class="view-header">
+                <h2>Appointments</h2>
+                <button class="btn btn--primary" data-action="book-appointment">
+                    <i class="fas fa-plus"></i>
+                    Book New Session
+                </button>
+            </div>
+
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button class="btn btn--secondary" data-action="prev-month">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h3 id="calendar-month">September 2025</h3>
+                    <button class="btn btn--secondary" data-action="next-month">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="calendar-grid">
+                    <div class="calendar-weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="calendar-days" id="calendar-days">
+                        <!-- Calendar days will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="upcoming-appointments">
+                <h3>Upcoming Appointments</h3>
+                <div class="appointment-list">
+                    <div class="appointment-card">
+                        <div class="appointment-date">
+                            <div class="day">16</div>
+                            <div class="month">Sep</div>
+                        </div>
+                        <div class="appointment-details">
+                            <h4>Follow-up Session</h4>
+                            <p>11:00 AM - 12:00 PM</p>
+                            <p>Dr. Meera Sharma</p>
+                        </div>
+                        <div class="appointment-actions">
+                            <button class="btn btn--outline btn--sm" data-action="reschedule">Reschedule</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Health Profile View -->
+        <div id="profile-view" class="view">
+            <div class="view-header">
+                <h2>Health Profile</h2>
+                <p class="view-subtitle">Your Ayurvedic constitution and health information</p>
+            </div>
+
+            <div class="profile-content">
+                <div class="dosha-analysis card">
+                    <div class="card-header">
+                        <h3>Your Prakriti (Constitution)</h3>
+                        <div class="constitution-type">Vata-Pitta</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="dosha-chart">
+                            <div class="dosha-item">
+                                <div class="dosha-info">
+                                    <span class="dosha-name">Vata</span>
+                                    <span class="dosha-percentage">60%</span>
+                                </div>
+                                <div class="dosha-bar">
+                                    <div class="dosha-fill vata" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div class="dosha-item">
+                                <div class="dosha-info">
+                                    <span class="dosha-name">Pitta</span>
+                                    <span class="dosha-percentage">35%</span>
+                                </div>
+                                <div class="dosha-bar">
+                                    <div class="dosha-fill pitta" style="width: 35%"></div>
+                                </div>
+                            </div>
+                            <div class="dosha-item">
+                                <div class="dosha-info">
+                                    <span class="dosha-name">Kapha</span>
+                                    <span class="dosha-percentage">25%</span>
+                                </div>
+                                <div class="dosha-bar">
+                                    <div class="dosha-fill kapha" style="width: 25%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="personal-info card">
+                    <div class="card-header">
+                        <h3>Personal Information</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="label">Name:</span>
+                                <span class="value">Arjun Patel</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Age:</span>
+                                <span class="value">34 years</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Phone:</span>
+                                <span class="value">+91 98765 43210</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Email:</span>
+                                <span class="value">arjun.patel@email.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vital-stats card">
+                    <div class="card-header">
+                        <h3>Vital Statistics</h3>
+                        <span class="last-updated">Last updated: September 13, 2025</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="vital-grid">
+                            <div class="vital-item">
+                                <div class="vital-icon">⚖️</div>
+                                <div class="vital-info">
+                                    <span class="vital-label">Weight</span>
+                                    <span class="vital-value">72 kg</span>
+                                </div>
+                            </div>
+                            <div class="vital-item">
+                                <div class="vital-icon">❤️</div>
+                                <div class="vital-info">
+                                    <span class="vital-label">Blood Pressure</span>
+                                    <span class="vital-value">120/80</span>
+                                </div>
+                            </div>
+                            <div class="vital-item">
+                                <div class="vital-icon">💓</div>
+                                <div class="vital-info">
+                                    <span class="vital-label">Pulse Rate</span>
+                                    <span class="vital-value">72 bpm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Care Guide View -->
+        <div id="care-guide-view" class="view">
+            <div class="view-header">
+                <h2>Care Guide</h2>
+                <p class="view-subtitle">Important instructions for your treatment</p>
+            </div>
+
+            <div class="care-sections">
+                <div class="care-section card">
+                    <div class="card-header">
+                        <h3>Pre-Treatment Care</h3>
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="card-body">
+                        <ul class="care-list">
+                            <li><i class="fas fa-check-circle"></i> Eat light meals 24 hours before treatment</li>
+                            <li><i class="fas fa-check-circle"></i> Avoid alcohol and smoking</li>
+                            <li><i class="fas fa-check-circle"></i> Get adequate rest the night before</li>
+                            <li><i class="fas fa-check-circle"></i> Arrive 15 minutes early for preparation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="care-section card">
+                    <div class="card-header">
+                        <h3>Post-Treatment Care</h3>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="card-body">
+                        <ul class="care-list">
+                            <li><i class="fas fa-check-circle"></i> Rest for at least 30 minutes after treatment</li>
+                            <li><i class="fas fa-check-circle"></i> Drink warm water regularly</li>
+                            <li><i class="fas fa-check-circle"></i> Avoid cold foods and drinks</li>
+                            <li><i class="fas fa-check-circle"></i> Follow prescribed herbal medicines</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="care-section card">
+                    <div class="card-header">
+                        <h3>Dietary Guidelines</h3>
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="card-body">
+                        <div class="dietary-tabs">
+                            <div class="tab-buttons">
+                                <button class="tab-btn active" data-tab="recommended">Recommended</button>
+                                <button class="tab-btn" data-tab="avoid">Avoid</button>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="recommended">
+                                    <ul class="diet-list">
+                                        <li>🥬 Fresh leafy greens</li>
+                                        <li>🍲 Warm, cooked meals</li>
+                                        <li>🌿 Herbal teas</li>
+                                        <li>🥛 Warm milk with spices</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane" id="avoid">
+                                    <ul class="diet-list">
+                                        <li>🧊 Cold drinks and ice</li>
+                                        <li>🍕 Processed foods</li>
+                                        <li>🌶️ Very spicy foods</li>
+                                        <li>☕ Excessive caffeine</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress View -->
+        <div id="progress-view" class="view">
+            <div class="view-header">
+                <h2>Progress Tracking</h2>
+                <p class="view-subtitle">Your healing journey visualization</p>
+            </div>
+
+            <div class="progress-charts">
+                <div class="chart-container card" style="position: relative; height: 400px;">
+                    <h3>Wellness Trend</h3>
+                    <canvas id="progressChart"></canvas>
+                </div>
+            </div>
+
+            <div class="milestones">
+                <h3>Treatment Milestones</h3>
+                <div class="milestone-list">
+                    <div class="milestone completed">
+                        <div class="milestone-icon">✅</div>
+                        <div class="milestone-content">
+                            <h4>Treatment Started</h4>
+                            <p>September 2, 2025</p>
+                        </div>
+                    </div>
+                    <div class="milestone completed">
+                        <div class="milestone-icon">✅</div>
+                        <div class="milestone-content">
+                            <h4>First Week Completed</h4>
+                            <p>September 8, 2025</p>
+                        </div>
+                    </div>
+                    <div class="milestone active">
+                        <div class="milestone-icon">🎯</div>
+                        <div class="milestone-content">
+                            <h4>Mid-Treatment Assessment</h4>
+                            <p>September 16, 2025</p>
+                        </div>
+                    </div>
+                    <div class="milestone upcoming">
+                        <div class="milestone-icon">⏳</div>
+                        <div class="milestone-content">
+                            <h4>Treatment Completion</h4>
+                            <p>September 23, 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Messages View -->
+        <div id="messages-view" class="view">
+            <div class="view-header">
+                <h2>Messages</h2>
+                <button class="btn btn--primary" data-action="new-message">
+                    <i class="fas fa-plus"></i>
+                    New Message
+                </button>
+            </div>
+
+            <div class="messages-container">
+                <div class="message-thread">
+                    <div class="message received">
+                        <div class="message-avatar">MS</div>
+                        <div class="message-content">
+                            <div class="message-header">
+                                <span class="sender">Dr. Meera Sharma</span>
+                                <span class="time">Yesterday, 2:30 PM</span>
+                            </div>
+                            <div class="message-text">
+                                How are you feeling after yesterday's session? Please let me know if you experience any discomfort.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="message sent">
+                        <div class="message-content">
+                            <div class="message-header">
+                                <span class="time">Yesterday, 4:15 PM</span>
+                            </div>
+                            <div class="message-text">
+                                I'm feeling much better! The steam therapy was very relaxing. No discomfort so far.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="message received">
+                        <div class="message-avatar">MS</div>
+                        <div class="message-content">
+                            <div class="message-header">
+                                <span class="sender">Dr. Meera Sharma</span>
+                                <span class="time">Today, 9:00 AM</span>
+                            </div>
+                            <div class="message-text">
+                                Excellent! Continue with the prescribed herbs and remember to drink warm water. See you on Monday for the follow-up.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="message-input">
+                    <input type="text" placeholder="Type your message..." class="form-control">
+                    <button class="btn btn--primary" data-action="send-message">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Notifications Panel -->
+    <div id="notifications-panel" class="notifications-panel">
+        <div class="panel-header">
+            <h3>Notifications</h3>
+            <button class="close-btn" data-action="close-notifications">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="notification-list">
+            <div class="notification-item unread">
+                <div class="notification-icon">💊</div>
+                <div class="notification-content">
+                    <h5>Medicine Reminder</h5>
+                    <p>Time to take your herbal medicine</p>
+                    <small>30 minutes ago</small>
+                </div>
+            </div>
+            <div class="notification-item unread">
+                <div class="notification-icon">📅</div>
+                <div class="notification-content">
+                    <h5>Appointment Reminder</h5>
+                    <p>Follow-up session on Monday at 11:00 AM</p>
+                    <small>2 hours ago</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Book New Session</h3>
+                <button class="close-btn" data-action="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="booking-form">
+                <div class="form-group">
+                    <label class="form-label">Session Type</label>
+                    <select class="form-control" required>
+                        <option value="">Select Session Type</option>
+                        <option value="followup">Follow-up Session</option>
+                        <option value="abhyanga">Abhyanga Massage</option>
+                        <option value="swedana">Steam Therapy</option>
+                        <option value="consultation">Consultation</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Preferred Date</label>
+                    <input type="date" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Preferred Time</label>
+                    <select class="form-control" required>
+                        <option value="">Select Time</option>
+                        <option value="09:00">9:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="14:00">2:00 PM</option>
+                        <option value="15:00">3:00 PM</option>
+                        <option value="16:00">4:00 PM</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Notes (Optional)</label>
+                    <textarea class="form-control" rows="3" placeholder="Any specific concerns or requests..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn--secondary" data-action="close-modal">Cancel</button>
+                    <button type="submit" class="btn btn--primary">Book Session</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
